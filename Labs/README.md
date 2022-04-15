@@ -1,7 +1,7 @@
 # Desarrollo de entornos y agentes
 __Estudiante:__ Achu Gabriel Ariel
 <p style="text-align:  center;">
-<img src="./LAB1-AgenteAutomatico/imagenes/agente.gif" width="600" height="400" />
+<img src="./LAB1-AgenteAutomatico/imagenes/agente2.gif" width="600" height="400" />
 </p>
 
 
