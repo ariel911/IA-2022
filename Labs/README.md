@@ -15,7 +15,7 @@ Crear un software que simule un agente considerando, los diferentes tipos de esc
 En esta tarea realiza las siguiente acciones:
 - Aparece una plaga en la pantalla en una posición aleatoria.
 - El agente percibe la plaga en el ambiente y se mueve hacia la plaga para espantarla.
-- Cuando ocurre la colisión entre el agente y la plaga, la plaga desaparece del ambiente y se cuenta. (La plaga se espanto).
+- Cuando ocurre la colisión entre el agente y la plaga, el agente realiza una acción dependiendo que tipo de plaga es y luego la plaga desaparece del ambiente y se cuenta. (La plaga se espanto).
 - Vuelve al paso 1 (aparece otra plaga en el ambiente).
 ## Diferentes plagas que aparecen en el ambiente:
 
