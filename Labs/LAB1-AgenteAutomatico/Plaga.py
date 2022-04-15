@@ -1,9 +1,9 @@
-# The "Food" class
+# The "Plaga" class
 # -*- coding: utf-8 -*-
 import random
 global img;
 
-class Food():
+class Plaga():
     def __init__(self, x, y, vel,pos):
         self.acceleration = PVector(0, 0)
         self.velocity = vel
@@ -53,10 +53,10 @@ class Food():
     
     def collision(self):
         self.contador = self.contador + 1
-        #change the food position
+        #change the Plaga position
         #vel = PVector(0,0)
         self.position = PVector(random.randint(0,620), random.randint(0,340))
-       # print("Comida: " + str(food.getContador()) )
+       # print("Comida: " + str(Plaga.getContador()) )
         self.i=random.randint(1,5)
     
     
