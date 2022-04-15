@@ -1,4 +1,5 @@
 # Desarrollo de entornos y agentes
+__Estudiante:__ Achu Gabriel Ariel
 <p style="text-align:  center;">
 <img src="./LAB1-AgenteAutomatico/imagenes/agente.gif" width="600" height="400" />
 </p>
@@ -25,6 +26,8 @@ En esta tarea realiza las siguiente acciones:
 <img src="./LAB1-AgenteAutomatico/imagenes/img3.png" width="100" height="100" />
 <img src="./LAB1-AgenteAutomatico/imagenes/img4.png" width="100" height="100" />
 <img src="./LAB1-AgenteAutomatico/imagenes/img5.png" width="100" height="100" />
+<img src="./LAB1-AgenteAutomatico/imagenes/img6.png" width="100" height="100" />
+<img src="./LAB1-AgenteAutomatico/imagenes/img7.png" width="100" height="100" />
 </p>
 
 ## Clase Plaga
@@ -50,6 +53,11 @@ class Plaga():
     def applyForce(self, force):
         self.acceleration.add(force)
 
+    def getPosition(self):
+        return self.position
+```
+funcion __display__ desplegara una plaga aleatoria y en una posición aleatoria
+```python 
     def display(self):
         theta = self.velocity.heading()
         fill(0)
@@ -59,15 +67,22 @@ class Plaga():
             rotate(theta)
             img = loadImage("imagenes/img{}.png".format(self.i))
             image(img,0,0,28,28)
+      
 
-            
-    def getPosition(self):
-        return self.position
-    
+```
+La funcion __collision__ esta funcion se encarga de actualizar las posiciones  cuando llega colision entre el robot y la plaga e incrementar el contador de plaga espantada, tambien muestra la accion a realizar de acuerdo al tipo de plaga que aparece en el ambiente
+```python 
     def collision(self):
         self.contador = self.contador + 1
         self.position = PVector(random.randint(0,620), random.randint(0,340))
-        self.i=random.randint(1,5)
+        if self.i==1 or self.i==2 or self.i==3:
+            self.accion="hacer ruido"
+        if self.i==4 or self.i==5:
+            self.accion="lanzar humo"
+        if self.i==6 or self.i==7:
+            self.accion="lanzar olor irritante"
+        self.i=random.randint(1,7)
+        
     
     def getContador(self):
         return self.contador

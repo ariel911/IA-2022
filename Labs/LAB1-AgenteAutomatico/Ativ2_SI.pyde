@@ -18,7 +18,7 @@ def setup():
     vehicle = Vehicle(width / 2, height / 2, velocity)
     global plaga 
     vel = PVector(0,0)
-    plaga = Plaga(random.randint(0,640), random.randint(0,360), vel,2) 
+    plaga = Plaga(random.randint(0,640), random.randint(0,360), vel,4) 
 
 
 def draw():
@@ -34,8 +34,12 @@ def draw():
     target = plaga.getPosition()
     vehicle.arrive(target)
     count = plaga.contador
+    accion = plaga.accion
     texto = "Plaga espatanda:"
+    texto2 = "accion a realizar:"
     text (texto, 10,15)
     text(count, 105,15)
+    text(texto2, 150,15)
+    text(accion, 250,15)
     if (plaga.getPosition().dist(vehicle.getPosition()) <= 4):
         plaga.collision()

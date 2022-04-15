@@ -13,6 +13,7 @@ class Plaga():
         self.maxforce = 0.01
         self.contador = 0
         self.i=pos
+        self.accion=" "
 
     # Method to update location
     def update(self):
@@ -38,7 +39,7 @@ class Plaga():
             translate(self.position.x, self.position.y)
             rotate(theta)
             img = loadImage("imagenes/img{}.png".format(self.i))
-            image(img,0,0,28,28)
+            image(img,0,0,32,32)
 
             
             # beginShape()
@@ -57,7 +58,14 @@ class Plaga():
         #vel = PVector(0,0)
         self.position = PVector(random.randint(0,620), random.randint(0,340))
        # print("Comida: " + str(Plaga.getContador()) )
-        self.i=random.randint(1,5)
+        if self.i==1 or self.i==2 or self.i==3:
+            self.accion="hacer ruido"
+        if self.i==4 or self.i==5:
+            self.accion="lanzar humo"
+        if self.i==6 or self.i==7:
+            self.accion="lanzar olor irritante"
+        self.i=random.randint(1,7)
+        
     
     
     def getContador(self):
