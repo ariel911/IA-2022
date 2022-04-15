@@ -73,7 +73,7 @@ class Plaga():
         return self.contador
 ```
 ## robot:
-<p style="text-align:  center; background-color: white;">
+<p style="text-align:  center; background-color: white; color:white">
 <img src="./LAB1-AgenteAutomatico/imagenes/robot6.png" width="100" height="100" />
 </p>
 
